@@ -8,10 +8,10 @@ namespace RadiusCalculations
 {
     internal class Circle
     {
-        public int Radius { get; set; }
+        public double Radius { get; set; }
 
 
-        public Circle(int radius)
+        public Circle(double radius)
         {
             Radius = radius;
         }
