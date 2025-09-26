@@ -54,16 +54,24 @@ namespace RadiusCalculations
             return area;
         }
 
-        public double GetAngles()
+        public string GetAngles()
         {
             // Law of cosines, step by step...
             double squaredSideA = SideA * SideA;
             double squaredSideB = SideB * SideB;
             double squaredSideC = SideC * SideC;
 
-            double alphaCosineAngleX = (squaredSideA + squaredSideB - squaredSideC);
-            //double betaCosineAngleX = 
-            return 0; // TEMPORARY
+            double cosineAngleX = (squaredSideA + squaredSideB - squaredSideC) / (SideA * SideB * 2);
+            double angleXInRadians = Math.Acos(cosineAngleX);
+            double angleXInDegrees = angleXInRadians * (180 / Math.PI);
+
+            double cosineAngleY = (squaredSideA + squaredSideB - squaredSideC) / (SideA * SideC * 2);
+            double angleYInRadians = Math.Acos(cosineAngleY);
+            double angleYInDegrees = angleYInRadians * (180 / Math.PI);
+
+            double angleZInDegrees = 180 - angleXInDegrees - angleYInDegrees;
+            string angleResults = $"{angleXInDegrees}, {angleYInDegrees} and {angleZInDegrees}";
+            return angleResults;
         }
 
     }

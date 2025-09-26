@@ -4,11 +4,13 @@
     {
         static void Main(string[] args)
         {
+
             Console.CursorVisible = false;
 
             bool appStillRunning = true;
             while (appStillRunning)
             {
+
                 string[] menuHeader = [
                     "\t\tWelcome to RadiusCalculations!\n",
                 "\tWhat would you like to calculate today?\n"
@@ -23,7 +25,9 @@
                     "Angles of a triangle",
                     "- QUIT",
                 ];
+                
                 int menuSelection = Menu.Render(menuHeader, menuOptions);
+
 
                 switch (menuSelection)
                 {
@@ -48,7 +52,7 @@
                             PresentCircle("sphere");
                             double userInput = UserInput.Double();
                             Circle myCircle = new Circle(userInput);
-                            Console.WriteLine($"\nThe volume of your sphere is {myCircle.GetArea()}");
+                            Console.WriteLine($"\nThe volume of your sphere is {myCircle.GetVolume()}");
                             break;
                         }
                     case 3:
@@ -62,7 +66,7 @@
                             }
                             else
                             {
-                                Console.WriteLine("A triangle cannot be formed out of the numbers you supplied.");
+                                Console.WriteLine("\nA triangle cannot be formed out of the numbers you supplied.");
                             }
                             break;
                         }
@@ -88,7 +92,6 @@
                             bool isTriangle = myTriangle.IsTriangle();
                             if (isTriangle == true)
                             {
-
                                 Console.WriteLine($"\nThe angles of your triangle's edges are {myTriangle.GetAngles()}");
                             }
                             else
