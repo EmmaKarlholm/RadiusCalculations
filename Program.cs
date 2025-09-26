@@ -38,7 +38,7 @@
                     case 5:
                         break;
                     case 6:
-                        Console.WriteLine("\n\n\tHave a nice day!");
+                        Console.WriteLine("\n\n\t\tHave a nice day!");
                         Environment.Exit(0);
                         break;
                 }

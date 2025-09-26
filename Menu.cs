@@ -14,14 +14,15 @@ namespace RadiusCalculations
         // Out: menuSelection, Integer containing a value corresponding to the menu index.
         public static int Render(string[] menuHeader, string[] menuOptions)
         {
+            Console.CursorVisible = false;
             int menuSelection;
             int currentSelection = 0;
 
             while (true)
             {
                 Console.Clear();
-                string arrowMarker = " -> ";
-                string emptyMarker = "    ";
+                string arrowMarker = "\t -> ";
+                string emptyMarker = "\t    ";
 
 
                 // Draw menu header.
