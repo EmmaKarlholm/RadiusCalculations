@@ -16,9 +16,9 @@
                     "Circumference of a circle",
                     "Area of a circle",
                     "Volume of a sphere",
-                    "Circumference of a triangle",
+                    "Perimeter of a triangle",
                     "Area of a triangle",
-                    "Circumference of a triangle",
+                    "Angles of a triangle",
                     "QUIT"
                 ];
                 int menuSelection = Menu.Render(menuHeader, menuOptions);
