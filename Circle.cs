@@ -8,13 +8,20 @@ namespace RadiusCalculations
 {
     internal class Circle
     {
-        public double Radius { get; set; }
+        private double Radius { get; set; }
 
 
-        public Circle(double radius)
+        public Circle()
+        {
+            // Empty, I want to practice using methods instead.
+        }
+
+
+        public void SetRadius(double radius)
         {
             Radius = radius;
         }
+
         public double GetCircumference()
         {
             return Radius * 2;
@@ -29,6 +36,5 @@ namespace RadiusCalculations
         {
             return (Radius * Radius * Radius) * Math.PI;
         }
-
     }
 }

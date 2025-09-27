@@ -9,12 +9,18 @@ namespace RadiusCalculations
 {
     internal class Triangle
     {
-        public double SideA { get; set; }
-        public double SideB { get; set; }
-        public double SideC { get; set; }
+        private double SideA { get; set; }
+        private double SideB { get; set; }
+        private double SideC { get; set; }
 
-        
-        public Triangle(double sideA, double sideB, double sideC)
+
+        public Triangle()
+        {
+            // Empty, I want to practice using methods instead.
+        }
+
+
+        public void SetSides(double sideA, double sideB, double sideC)
         {
             SideA = sideA;
             SideB = sideB;
@@ -73,8 +79,5 @@ namespace RadiusCalculations
             string angleResults = $"{angleXInDegrees}, {angleYInDegrees} and {angleZInDegrees}";
             return angleResults;
         }
-
     }
-
-
 }
